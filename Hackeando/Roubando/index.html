@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Hello Matrix</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <style>
+    h1{
+      position: absolute;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 6em;
+      color: white;
+      font-weight: 900;
+      /* text-align: center; */
+      margin-left: 50%;
+      margin-top: 50%;
+      transform: translate(-50% , -60vh);
+    }
+    h2{
+      position: absolute;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 3em;
+      color: white;
+      font-weight: 900;
+      /* text-align: center; */
+      margin-left: 50%;
+      margin-top: 50%;
+      transform: translate(-50% , -40vh);
+      text-align: center;
+    }
+    .preto{
+      background-color: black;
+      opacity: 0.5;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+<!-- partial:index.partial.html -->
+<!-- Hello World in 92 Languages falling down in Matrix code rain-->
+<!-- partial -->
+  <div class="preto"></div>
+  <h1>0%
+  </h1>
+  <h2>Enviando imagens
+  </h2>
+  
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js'></script><script  src="./script.js"></script>
+  <script>
+    
+
+    let h1 = document.querySelectorAll('h1')[0];
+    let i = 0;
+
+    let intervalo1 = setInterval(() => { 
+
+      if (i>=100) {
+        h1.innerHTML = '100%';
+        clearInterval(intervalo1)
+      }else{
+        h1.innerHTML = i + '%';
+        i++;
+      }
+  
+      }, 395) 
+     
+    let h2 = document.querySelectorAll('h2')[0];
+    let j = 1;
+    let lista = ['Enviando imagens', 'Enviando videos', 'Enviando Senhas', 'Enviando seções logadas', 'Enviando pedido de socorro', 'Enviando conversas do WhatsApp', 'Enviando um ronaldinho', 'Enviando print da sua tela', 'Enviando contrato assinado de doação de 100.000.000', 'Já sei que você é pobre, nunca irei receber', 'Enviado por completo, nosso trabalho terminou', 'Você será redirecionado em instantes', 'Afirmo, NADA ACONTECEU POR AQUI!!']
+    
+    let intervalo2 = setInterval(() => { 
+      
+      if (j>=lista.length-1) {
+        h2.innerHTML = lista[lista.length-1];
+
+        setInterval(() => {
+           window.location.replace("../../");
+        }, 2000);
+        clearInterval(intervalo2);
+        
+      }else{
+        h2.innerHTML = lista[j];
+        j++;
+      }
+      
+
+    }, 4000)
+    
+  </script>
+</body>
+</html>
